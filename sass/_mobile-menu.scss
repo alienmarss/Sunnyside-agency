@@ -1,0 +1,102 @@
+@media only screen and (max-width: $bp-medium) {
+	.header {
+		&__main--nav {
+			background-color: $white;
+			position: absolute;
+			top: 12rem;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			width: 88%;
+			height: 50%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: scale(0.5);
+			transform-origin: top right;
+
+			box-shadow: 0 10px 40px hsla(0, 0%, 0%, 0.1);
+
+			transition: all 0.3s ease-in-out;
+
+			//1. hide menu visually
+			opacity: 0;
+
+			//2. make menu unaccessible to mouse and keyboard
+			pointer-events: none;
+
+			//3. hide from screen readers
+			visibility: hidden;
+
+			z-index: 9999;
+		}
+
+		&__nav--list {
+			flex-direction: column;
+		}
+
+		// small angle on right side
+		&__main--nav::after {
+			position: absolute;
+			border-left: 3rem solid transparent;
+			border-right: 3rem solid transparent;
+			border-bottom: 3rem solid $white;
+			border-top: 3rem solid transparent;
+
+			bottom: 100%;
+			right: 0;
+			margin-left: -2rem;
+			content: "";
+			transform: rotate(-90deg);
+			margin-bottom: -3rem;
+			transform: translateY(1);
+		}
+
+		&__menu {
+			padding: 6.4rem 2rem;
+		}
+
+		&__nav--link:link,
+		&__nav--link:visited {
+			color: $dark-grey-blue;
+		}
+
+		&__nav--link:hover,
+		&__nav--link:active {
+			color: $soft-red;
+		}
+
+		&__contact {
+			color: black;
+			background-color: $yellow;
+
+			&:hover,
+			&:active {
+				background-color: $soft-red;
+				color: $white;
+			}
+		}
+	}
+
+	.nav-open .header__main--nav {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		transform: translateY(0) translateX(0);
+	}
+
+	// making line on button cross when click
+	.nav-open .nav-toggle-btn .one {
+		transform: translateY(5px) rotate(45deg);
+	}
+
+	.nav-open .nav-toggle-btn .two {
+		display: none;
+	}
+
+	.nav-open .nav-toggle-btn .three {
+		transform: translateY(-4px) rotate(-45deg);
+	}
+}

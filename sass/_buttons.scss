@@ -1,0 +1,108 @@
+.btn1__container {
+	display: inline-block;
+	position: relative;
+}
+
+.btn1__link {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: $darkest-blue;
+
+	&::before {
+		content: "";
+		width: 15rem;
+		height: 10px;
+		border-radius: 5px;
+		position: absolute;
+		top: 62%;
+		z-index: -1;
+		transition: 0.3s ease;
+		background-color: $yellow-light;
+		cursor: pointer;
+		margin-left: -1rem;
+
+		@media only screen and (max-width: $bp-small) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 12rem;
+		}
+	}
+
+	&:hover::before {
+		content: "";
+		width: 15rem;
+		height: 10px;
+		border-radius: 5px;
+		position: absolute;
+		top: 62%;
+		z-index: -1;
+		transition: 0.3s ease;
+		background-color: $yellow;
+		cursor: pointer;
+
+		@media only screen and (max-width: $bp-small) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 12rem;
+		}
+	}
+}
+.btn2__container {
+	display: inline-block;
+	position: relative;
+}
+
+.btn2__link {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: $darkest-blue;
+
+	&::before {
+		content: "";
+		width: 15rem;
+		height: 10px;
+		border-radius: 5px;
+		position: absolute;
+		top: 62%;
+		z-index: -1;
+		transition: 0.3s ease;
+		background-color: rgba(254, 120, 103, 0.3);
+		cursor: pointer;
+		margin-left: -1rem;
+
+		@media only screen and (max-width: $bp-small) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 12rem;
+		}
+	}
+
+	&:hover::before {
+		content: "";
+		width: 15rem;
+		height: 10px;
+		border-radius: 5px;
+		position: absolute;
+		top: 62%;
+		z-index: -1;
+		transition: 0.3s ease;
+		background-color: $soft-red;
+		cursor: pointer;
+
+		@media only screen and (max-width: $bp-small) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 12rem;
+		}
+	}
+}

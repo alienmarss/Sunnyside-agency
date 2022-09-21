@@ -1,0 +1,14 @@
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	@media only screen and (max-width: $bp-medium) {
+		.gallery__img-4 {
+			grid-column: 2 / 3;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+}

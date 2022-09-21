@@ -1,0 +1,61 @@
+.footer {
+	background-color: $moderate-cyan;
+	width: 100%;
+	height: 50%;
+
+	&__logo {
+		text-align: center;
+		padding: 10rem 0 5rem 0;
+		&--1 {
+			height: 3rem;
+			width: 15rem;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		font-family: $font-secondary;
+		transition: all 0.3s;
+		color: #458c7e;
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&__text-box {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+		@media only screen and (max-width: $bp-medium) {
+			.mb-c {
+				grid-column: 2 / 3;
+			}
+		}
+		justify-items: center;
+		align-items: center;
+		gap: 3rem;
+		margin: 0 auto;
+		height: 20%;
+		width: 50%;
+	}
+
+	&__social-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		margin: 0 auto;
+		width: 50%;
+		height: 30%;
+		padding: 10rem 10rem;
+	}
+}
+
+.fa-brands {
+	color: #2c7566;
+	font-size: 2.5rem;
+	transition: all 0.3s;
+	margin-left: 2rem;
+}
+.fa-brands:hover {
+	color: $white;
+}

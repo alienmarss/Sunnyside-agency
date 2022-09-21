@@ -1,0 +1,47 @@
+// COLOR VARIABLES
+
+//Primary color
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$yellow-light: #e8e894a9;
+$dark-cyan: hsl(167, 40%, 24%);
+$moderate-cyan: hsl(166, 45%, 74%);
+$dark-blue: hsl(198, 62%, 26%);
+$light-cyan: hsl(168, 34%, 37%);
+
+// Neutral color
+$darkest-blue: hsl(211, 28%, 19%);
+$darkest-grey-blue: hsl(213, 9%, 39%);
+$dark-grey-blue: hsl(232, 10%, 55%);
+$grey-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+// FONT VARIABLES
+$font-primary: "Fraunces", serif;
+$font-secondary: "Barlow", sans-serif;
+
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 122em; // 1200px;
+$bp-large: 101em; // 1000px;
+$bp-medium: 53em; // 800px;
+$bp-small: 37.5em; // 600px;
+$bp-smallest: 30em; // 480px;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	// scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-primary;
+	font-size: 1.8rem;
+}

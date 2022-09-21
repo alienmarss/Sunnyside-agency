@@ -1,0 +1,164 @@
+.hero {
+	background-image: url(../images/desktop/image-header.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 73vh;
+
+	&__heading {
+		text-align: center;
+	}
+
+	&__icon {
+		animation: jump-down 2s;
+		animation-iteration-count: infinite;
+		animation-delay: 1s;
+	}
+
+	@keyframes jump-down {
+		0%,
+		50%,
+		100% {
+			transform: translateY(0);
+		}
+
+		12.5%,
+		37.5% {
+			transform: translateY(20px);
+		}
+
+		25% {
+			transform: translateY(10px);
+		}
+	}
+}
+
+.header {
+	&__logo {
+		height: 3rem;
+		width: 15rem;
+
+		@media only screen and (max-width: $bp-smallest) {
+			height: 2.5rem;
+			width: 12rem;
+		}
+	}
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: 9.6rem;
+		padding: 6.4rem 4.8rem;
+
+		margin-bottom: 10rem;
+	}
+
+	&__nav--list {
+		list-style: none;
+		display: flex;
+
+		align-items: center;
+		gap: 4.8rem;
+	}
+
+	&__nav--link:link,
+	&__nav--link:visited {
+		display: inline-block;
+		text-decoration: none;
+		color: $white;
+		font-weight: 500;
+		font-size: 1.8rem;
+		transition: all 0.3s;
+		font-family: $font-secondary;
+	}
+
+	&__nav--link:hover,
+	&__nav--link:active {
+		color: $yellow;
+	}
+
+	&__contact {
+		color: black;
+		background-color: white;
+		padding: 1.5rem 4rem;
+		border-radius: 10rem;
+		font-family: $font-primary;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 0.3s;
+
+		&:hover,
+		&:active {
+			background-color: rgba(255, 255, 255, 0.233);
+			color: $white;
+		}
+	}
+
+	// Mobile Nav
+
+	.navbar-nav .active {
+		transform: scale(1);
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	.nav-toggle-btn {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 3rem;
+		height: 2.4rem;
+		gap: 6px;
+		text-decoration: none;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		display: none;
+		// make visible menu
+		@media only screen and (max-width: $bp-medium) {
+			display: flex;
+		}
+	}
+
+	.nav-toggle-btn .line {
+		background: $white;
+		width: 100%;
+		height: 3px;
+		transition: all 0.3s;
+	}
+}
+//Sticky navbar
+.sticky .header {
+	position: fixed;
+	top: 0;
+
+	width: 100%;
+	height: 12rem;
+	background-color: $moderate-cyan;
+	z-index: 999;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	@media only screen and (max-width: $bp-medium) {
+		.header__main--nav {
+			background-color: $white;
+			position: absolute;
+			top: 12rem;
+
+			margin-left: auto;
+			margin-right: auto;
+			width: 88%;
+			height: 30rem;
+
+			box-shadow: 0 10px 40px hsla(0, 0%, 0%, 0.1);
+
+			transition: all 0.3s ease-in-out;
+
+			pointer-events: auto;
+
+			z-index: 9999;
+		}
+	}
+}
